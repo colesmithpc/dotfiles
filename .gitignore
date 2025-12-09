@@ -1,0 +1,11 @@
+.cache/
+local/
+Trash/
+*.log
+
+.DS_Store
+thumbs.db
+
+*.key
+*.pem
+*.secret
