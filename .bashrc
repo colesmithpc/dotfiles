@@ -10,7 +10,13 @@ shopt -s histappend
 ############################################
 #  Prompt
 ############################################
-PS1='\u \W \$ '
+# Colors
+GREEN='\[\e[32m\]'
+BLUE='\[\e[34m\]'
+RESET='\[\e[0m\]'
+
+# Prompt: user@host:path $
+PS1="${GREEN}\u@\h${RESET}:${BLUE}\W${RESET} \$ "
 
 ############################################
 #  Aliases
