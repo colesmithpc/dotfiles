@@ -1,12 +1,23 @@
 # -----------------------------
 # Basic prompt
 # -----------------------------
-# Arch blue color
-ARCH_BLUE="\[\e[38;5;33m\]"
+
+# tput-based prompt with Arch-blue username@hostname
+BOLD=$(tput bold)
+RESET=$(tput sgr0)
+
+GRUVBOX_BRIGHT_BLUE="\[\e[38;5;109m\]"
 RESET="\[\e[0m\]"
 
-# Username@host in blue, path in cyan
-PS1="${ARCH_BLUE}\u@\h${RESET}:\[\e[36m\]\w${RESET}\$ "
+# Minimal prompt: username@hostname + working directory
+PS1="${GRUVBOX_BRIGHT_BLUE}\u@\h${RESET}:${GRUVBOX_BRIGHT_BLUE}\w${RESET}\$ "
+
+
+# -----------------------------
+# LS Colors: directories in blue
+# -----------------------------
+# Use 256-color blue for directories, everything else default
+export LS_COLORS="di=34:fi=0:ln=36:pi=33:so=35:bd=34;46:cd=34;43:or=31;1:ex=32"
 
 # -----------------------------
 # Aliases for convenience
@@ -14,12 +25,16 @@ PS1="${ARCH_BLUE}\u@\h${RESET}:\[\e[36m\]\w${RESET}\$ "
 alias paci='sudo pacman -Sy --noconfirm'
 alias pacr='sudo pacman -Rns --noconfirm'
 alias pacu='sudo pacman -Syu'   # update system
+alias ls='ls --color=auto'
 alias ll='ls -lh --color=auto'     # long listing with human-readable sizes
 alias lsa='ls -a --color=auto'     # show hidden files
 alias l='ls -CF --color=auto'     # simple listing
 alias grep='grep --color=auto'    # highlight grep matches
 alias reboot='sudo reboot now'
-alias shutdown='sudo shutdown now'
+alias poweroff='sudo shutdown now'
+alias c='clear'
+alias e='exit'
+alias ff='fastfetch'
 
 # -----------------------------
 # LS colors – Arch Blue Theme

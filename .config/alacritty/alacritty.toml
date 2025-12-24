@@ -1,0 +1,36 @@
+[colors]
+  [colors.primary]
+    background = "0x282828"  # dark grey background
+    foreground = "0xffffff"  # white text
+
+  [colors.normal]
+    black   = "0x1d2021"
+    red     = "0xfb4934"
+    green   = "0x4588b8"   # blue instead of green
+    yellow  = "0x83a5d1"   # light blue instead of yellow
+    blue    = "0x83a598"
+    magenta = "0x7e57c2"
+    cyan    = "0x5f85d6"
+    white   = "0xffffff"
+
+  [colors.bright]
+    black   = "0x928374"
+    red     = "0xfb4934"
+    green   = "0x4588b8"
+    yellow  = "0x83a5d1"
+    blue    = "0x458588"
+    magenta = "0x7e57c2"
+    cyan    = "0x5f85d6"
+    white   = "0xffffff"
+
+[font]
+normal.family = "Hack Nerd Font"
+normal.style = "Regular"
+bold.family = "Hack Nerd Font"
+bold.style = "Bold"
+italic.family = "Hack Nerd Font"
+italic.style = "Italic"
+size = 11.0
+offset.x = 0
+offset.y = 0
+
